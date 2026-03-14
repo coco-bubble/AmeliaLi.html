@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,35 +16,31 @@ body{
     margin:0;
 }
 
+/* logo container */
+
 .logo{
-
     font-family:'Orbitron',sans-serif;
-
-    font-size:140px;        
-    letter-spacing:18px;
-
+    font-size:70px;
+    letter-spacing:12px;
     color:#00eaff;
-
-    padding:40px 120px;
-
-    border:3px solid #00eaff;
-
     cursor:pointer;
 
+    padding:20px 60px;
+
+    border:2px solid #00eaff;
+
     text-shadow:
+        0 0 5px #00eaff,
         0 0 10px #00eaff,
-        0 0 20px #00eaff,
-        0 0 40px #00eaff,
-        0 0 80px #00eaff;
+        0 0 20px #00eaff;
 
     box-shadow:
-        0 0 20px #00eaff,
-        0 0 80px #00eaff,
-        0 0 160px #00eaff;
+        0 0 10px #00eaff,
+        0 0 40px #00eaff;
 
 }
 
-
+/* breathing animation */
 
 .breathing{
 
@@ -56,24 +52,22 @@ animation: glow 2.5s ease-in-out infinite;
 
 0%{
     text-shadow:
-    0 0 10px #00eaff,
-    0 0 30px #00eaff,
-    0 0 60px #00eaff;
+    0 0 5px #00eaff,
+    0 0 10px #00eaff;
 }
 
 50%{
     text-shadow:
-    0 0 20px #00eaff,
+    0 0 10px #00eaff,
+    0 0 30px #00eaff,
     0 0 60px #00eaff,
-    0 0 120px #00eaff,
-    0 0 200px #00eaff;
+    0 0 120px #00eaff;
 }
 
 100%{
     text-shadow:
-    0 0 10px #00eaff,
-    0 0 30px #00eaff,
-    0 0 60px #00eaff;
+    0 0 5px #00eaff,
+    0 0 10px #00eaff;
 }
 
 }
@@ -88,7 +82,9 @@ animation: glow 2.5s ease-in-out infinite;
 <script>
 
 function toggleGlow(){
+
 document.querySelector(".logo").classList.toggle("breathing")
+
 }
 
 </script>
