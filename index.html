@@ -2,59 +2,66 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Neon Logo</title>
+<title>Amelia Li</title>
+
+<!-- Futuristic font -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 
 <style>
 
 body{
-    background:black;
+    margin:0;
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
-    margin:0;
+    background:black;
 }
 
-/* Logo style */
-.logo{
-    font-size:80px;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing:10px;
-    color:#ff2bd6;
-    
-    text-shadow:
-        0 0 5px #ff2bd6,
-        0 0 10px #ff2bd6,
-        0 0 20px #ff2bd6,
-        0 0 40px #ff2bd6,
-        0 0 80px #ff2bd6;
+/* logo */
 
-    animation: glow 3s ease-in-out infinite;
+.logo{
+    font-family: 'Orbitron', sans-serif;
+    font-size:90px;
+    letter-spacing:12px;
+    color:#66ccff;
+
+    text-shadow:
+        0 0 5px #00cfff,
+        0 0 10px #00cfff,
+        0 0 20px #00cfff,
+        0 0 40px #00cfff,
+        0 0 80px #00cfff;
+
+    animation: neonBreath 3s ease-in-out infinite;
 }
 
 /* breathing neon animation */
-@keyframes glow{
+
+@keyframes neonBreath{
+
     0%{
-        opacity:0.6;
+        opacity:0.7;
         text-shadow:
-        0 0 5px #ff2bd6,
-        0 0 10px #ff2bd6,
-        0 0 20px #ff2bd6;
+        0 0 5px #00cfff,
+        0 0 10px #00cfff,
+        0 0 20px #00cfff;
     }
 
     50%{
         opacity:1;
         text-shadow:
-        0 0 10px #ff2bd6,
-        0 0 20px #ff2bd6,
-        0 0 40px #ff2bd6,
-        0 0 80px #ff2bd6,
-        0 0 120px #ff2bd6;
+        0 0 10px #00cfff,
+        0 0 25px #00cfff,
+        0 0 50px #00cfff,
+        0 0 90px #00cfff,
+        0 0 140px #00cfff;
     }
 
     100%{
-        opacity:0.6;
+        opacity:0.7;
     }
+
 }
 
 </style>
