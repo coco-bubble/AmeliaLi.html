@@ -1,13 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Lehan Li</title>
+<meta charset="UTF-8">
+<title>Neon Logo</title>
+
+<style>
+
+body{
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+/* Logo style */
+.logo{
+    font-size:80px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing:10px;
+    color:#ff2bd6;
+    
+    text-shadow:
+        0 0 5px #ff2bd6,
+        0 0 10px #ff2bd6,
+        0 0 20px #ff2bd6,
+        0 0 40px #ff2bd6,
+        0 0 80px #ff2bd6;
+
+    animation: glow 3s ease-in-out infinite;
+}
+
+/* breathing neon animation */
+@keyframes glow{
+    0%{
+        opacity:0.6;
+        text-shadow:
+        0 0 5px #ff2bd6,
+        0 0 10px #ff2bd6,
+        0 0 20px #ff2bd6;
+    }
+
+    50%{
+        opacity:1;
+        text-shadow:
+        0 0 10px #ff2bd6,
+        0 0 20px #ff2bd6,
+        0 0 40px #ff2bd6,
+        0 0 80px #ff2bd6,
+        0 0 120px #ff2bd6;
+    }
+
+    100%{
+        opacity:0.6;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>Hi, I'm Lehan Li.</h1>
-<p>A NYU student exploring media, culture, and storytelling.</p>
+<div class="logo">AMELIA</div>
 
 </body>
 </html>
