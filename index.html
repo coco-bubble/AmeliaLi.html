@@ -2,65 +2,80 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Amelia Li</title>
 
-<!-- Futuristic font -->
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
 
 <style>
 
 body{
-    margin:0;
+    background:black;
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    background:black;
+    margin:0;
 }
 
-/* logo */
 
 .logo{
-    font-family: 'Orbitron', sans-serif;
-    font-size:90px;
-    letter-spacing:12px;
-    color:#66ccff;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:140px;       
+    letter-spacing:18px;
+
+    color:#00eaff;
+
+    padding:40px 120px;
+
+    border:3px solid #00eaff;
+
+    cursor:pointer;
 
     text-shadow:
-        0 0 5px #00cfff,
-        0 0 10px #00cfff,
-        0 0 20px #00cfff,
-        0 0 40px #00cfff,
-        0 0 80px #00cfff;
+        0 0 10px #00eaff,
+        0 0 20px #00eaff,
+        0 0 40px #00eaff,
+        0 0 80px #00eaff;
 
-    animation: neonBreath 3s ease-in-out infinite;
+    box-shadow:
+        0 0 20px #00eaff,
+        0 0 80px #00eaff,
+        0 0 160px #00eaff;
+
 }
 
-/* breathing neon animation */
+/* breathing animation */
 
-@keyframes neonBreath{
+.breathing{
 
-    0%{
-        opacity:0.7;
-        text-shadow:
-        0 0 5px #00cfff,
-        0 0 10px #00cfff,
-        0 0 20px #00cfff;
-    }
+animation: glow 2.5s ease-in-out infinite;
 
-    50%{
-        opacity:1;
-        text-shadow:
-        0 0 10px #00cfff,
-        0 0 25px #00cfff,
-        0 0 50px #00cfff,
-        0 0 90px #00cfff,
-        0 0 140px #00cfff;
-    }
+}
 
-    100%{
-        opacity:0.7;
-    }
+@keyframes glow{
+
+0%{
+    text-shadow:
+    0 0 10px #00eaff,
+    0 0 30px #00eaff,
+    0 0 60px #00eaff;
+}
+
+50%{
+    text-shadow:
+    0 0 20px #00eaff,
+    0 0 60px #00eaff,
+    0 0 120px #00eaff,
+    0 0 200px #00eaff;
+}
+
+100%{
+    text-shadow:
+    0 0 10px #00eaff,
+    0 0 30px #00eaff,
+    0 0 60px #00eaff;
+}
 
 }
 
@@ -69,7 +84,15 @@ body{
 
 <body>
 
-<div class="logo">AMELIA</div>
+<div class="logo" onclick="toggleGlow()">AMELIA</div>
+
+<script>
+
+function toggleGlow(){
+document.querySelector(".logo").classList.toggle("breathing")
+}
+
+</script>
 
 </body>
 </html>
