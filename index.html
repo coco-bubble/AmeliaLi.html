@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AMELIA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
+    margin:0;
     background:black;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* HERO SECTION */
+
+.hero{
+
     height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    margin:0;
+
+    background:black;
+
+    position:relative;
+
 }
 
-/* logo container */
+/* LOGO */
 
 .logo{
+
     font-family:'Orbitron',sans-serif;
+
     font-size:70px;
+
     letter-spacing:12px;
+
     color:#00eaff;
+
     cursor:pointer;
 
     padding:20px 60px;
@@ -37,6 +65,8 @@ body{
     box-shadow:
         0 0 10px #00eaff,
         0 0 40px #00eaff;
+
+    transition:0.4s;
 
 }
 
@@ -72,22 +102,290 @@ animation: glow 2.5s ease-in-out infinite;
 
 }
 
+/* SMALL TEXT */
+
+.click-text{
+
+    position:absolute;
+
+    bottom:60px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:22px;
+
+    letter-spacing:3px;
+
+    color:#888;
+
+    animation:fade 2s infinite;
+
+}
+
+@keyframes fade{
+
+0%{
+opacity:0.3;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:0.3;
+}
+
+}
+
+/* ABOUT SECTION */
+
+#about{
+
+    min-height:100vh;
+
+    background:#f7f4ef;
+
+    color:black;
+
+    padding:140px 15%;
+
+    box-sizing:border-box;
+
+}
+
+/* ABOUT TITLE */
+
+.about-title{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:90px;
+
+    font-weight:300;
+
+    margin-bottom:40px;
+
+    line-height:1;
+
+}
+
+/* ABOUT TEXT */
+
+.about-text{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:30px;
+
+    line-height:1.8;
+
+    max-width:900px;
+
+    color:#333;
+
+    font-weight:300;
+
+}
+
+/* SMALL LABEL */
+
+.label{
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+    color:#777;
+
+    margin-bottom:30px;
+
+}
+
+/* PROJECTS */
+
+.projects{
+
+    margin-top:120px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:40px;
+
+}
+
+/* CARD */
+
+.card{
+
+    border:1px solid #ddd;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:white;
+
+    transition:0.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+
+}
+
+/* CARD TITLE */
+
+.card-title{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+/* CARD TEXT */
+
+.card-text{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="logo" onclick="toggleGlow()">AMELIA</div>
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="logo" onclick="goToAbout()">
+
+AMELIA
+
+</div>
+
+<div class="click-text">
+
+CLICK TO ENTER
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="label">
+
+ABOUT ME
+
+</div>
+
+<div class="about-title">
+
+Lehan Li / Amelia
+
+</div>
+
+<div class="about-text">
+
+I am a Media, Culture and Communication student at NYU interested in digital culture, visual storytelling, public relations, and identity in platform-driven spaces.
+
+My work explores how media changes the way people experience architecture, perform identity, and imagine themselves online. Across research papers, activism projects, and creative campaigns, I am especially interested in the relationship between aesthetics, visibility, and emotion in the digital age.
+
+</div>
+
+<!-- PROJECTS -->
+
+<div class="projects">
+
+<div class="card">
+
+<div class="card-title">
+
+Architecture as Media
+
+</div>
+
+<div class="card-text">
+
+Research project exploring how social media transforms architecture into image-driven performance and attention economies.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-title">
+
+Xiaohongshu & Identity
+
+</div>
+
+<div class="card-text">
+
+A cultural analysis of platform aesthetics, algorithmic visibility, and identity formation among young users.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-title">
+
+Removing Labels
+
+</div>
+
+<div class="card-text">
+
+Interactive activism project challenging gender stereotypes through collective public participation and visual storytelling.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 <script>
 
-function toggleGlow(){
+function goToAbout(){
 
 document.querySelector(".logo").classList.toggle("breathing")
+
+document.querySelector("#about").scrollIntoView({
+
+behavior:"smooth"
+
+})
 
 }
 
 </script>
 
 </body>
+
 </html>
